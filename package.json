@@ -1,0 +1,16 @@
+{
+  "name": "tipcalculatorapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "sass -s compressed scss/app.scss:css/style.css",
+    "css-watch": "sass -s compressed --watch scss/app.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "Daniel Noyola <pepenoyola13@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

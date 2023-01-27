@@ -1,0 +1,39 @@
+@use 'variables' as v;
+
+// Media querys
+@mixin telefono {
+    @media (max-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (max-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+// Displays
+@mixin grid($columns, $size, $gap: 0) {
+    display: grid;
+    grid-template-columns: repeat($columns, $size);
+    gap: $gap;
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
