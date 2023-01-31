@@ -37,3 +37,18 @@
     align-items: center;
     justify-content: center;
 }
+
+// Botones
+@mixin boton {
+    width: 100%;
+    padding-block: 1rem;
+    font-size: v.$fs-200;
+    border-radius: .5rem;
+
+}
+
+@mixin boton-primario($clr-principal, $clr-secundario) {
+    @include boton;
+    background-color: $clr-principal;
+    color: $clr-secundario;
+}

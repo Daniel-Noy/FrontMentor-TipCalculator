@@ -1,0 +1,43 @@
+@use '../globales/variables' as v;
+@use '../globales/mixins' as m;
+
+.resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+
+    border-radius: 1rem;
+    background-color: v.$clr-primario-300;
+
+    .reset {
+        @include m.boton-primario(v.$clr-secundario-300, v.$clr-primario-300);
+        text-transform: uppercase;
+        border: 0;
+    }
+}
+
+.resultados__contenido {
+    color: v.$clr-neutral-100;
+
+    .resultado__contenedor {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+
+    .resultado__texto {
+        line-height: 1.5;
+        
+        p:nth-child(2) {
+            font-size: 1.2rem;
+            color: v.$clr-primario-200;
+        }
+    }
+
+    .resultado__cantidad {
+        font-size: v.$fs-500;
+        color: v.$clr-secundario-300;
+    }
+
+}

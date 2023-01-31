@@ -1,0 +1,15 @@
+@use '../globales/variables.scss' as v;
+@use '../globales/mixins.scss' as m;
+
+
+.calculadora {
+    @include m.grid(2, 1fr, 4rem);
+    padding: 2rem;
+
+    @include m.tablet {
+        grid-template-columns: 1fr;
+    }
+
+    border-radius: 2rem;
+    background-color: v.$clr-neutral-100;
+}

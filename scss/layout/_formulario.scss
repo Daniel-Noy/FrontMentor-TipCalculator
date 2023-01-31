@@ -1,0 +1,68 @@
+@use '../globales/variables.scss' as v;
+@use '../globales/mixins.scss' as m;
+
+.formulario {
+    padding: 2rem;
+
+    label {
+        display: inline-block;
+        color: v.$clr-primario-200;
+    }
+    input {
+        width: 100%;
+        padding: .2rem 2rem;
+
+
+        direction: rtl;
+        font-size: v.$fs-200;
+        
+        color: v.$clr-primario-200;
+        border: 0;
+        border-radius: .2rem;
+        background-color: v.$clr-secundario-100;
+    }
+
+    .input-contenedor {
+        position: relative;
+        margin-bottom: 4rem;
+    }
+    .input-contenedor > * {
+        margin-bottom: 1rem;
+    }
+    .input-contenedor::before {
+        content: "";
+        position: absolute;
+        bottom: 0;        
+        display: inline-block;
+
+        height: 100%;
+        width: 3rem;
+
+        background-position: 1.5rem 4rem;
+        background-repeat: no-repeat;
+    }
+
+    
+    .input-propina::before {
+        background-image: url('../images/icon-dollar.svg');
+    }
+    .input-personas {
+        margin: 0;
+    }
+    .input-personas::before {
+        background-image: url('../images/icon-person.svg');
+    }
+    
+
+    .botones-propina {
+        @include m.grid(3, 1fr, 1rem); 
+
+        .boton-propina {
+            @include m.boton-primario(v.$clr-primario-300, v.$clr-neutral-100)
+        }
+        input[type="text"] {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
