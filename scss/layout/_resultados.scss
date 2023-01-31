@@ -11,7 +11,7 @@
     background-color: v.$clr-primario-300;
 
     .reset {
-        @include m.boton-primario(v.$clr-secundario-300, v.$clr-primario-300);
+        @include m.boton-primario(v.$clr-secundario-300, v.$clr-primario-300, v.$clr-secundario-200);
         text-transform: uppercase;
         border: 0;
     }

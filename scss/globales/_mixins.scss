@@ -42,13 +42,18 @@
 @mixin boton {
     width: 100%;
     padding-block: 1rem;
+
     font-size: v.$fs-200;
     border-radius: .5rem;
-
+    cursor: pointer;
+    transition: all .1s ease
 }
 
-@mixin boton-primario($clr-principal, $clr-secundario) {
+@mixin boton-primario($clr-principal, $clr-secundario, $clr-complementario) {
     @include boton;
     background-color: $clr-principal;
     color: $clr-secundario;
+    &:hover{
+        background-color: $clr-complementario;
+    }
 }

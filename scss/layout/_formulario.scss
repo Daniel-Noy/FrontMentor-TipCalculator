@@ -20,6 +20,11 @@
         border: 0;
         border-radius: .2rem;
         background-color: v.$clr-secundario-100;
+        
+        &:focus {
+            outline: 2px solid v.$clr-secundario-300;
+
+        }
     }
 
     .input-contenedor {
@@ -58,7 +63,11 @@
         @include m.grid(3, 1fr, 1rem); 
 
         .boton-propina {
-            @include m.boton-primario(v.$clr-primario-300, v.$clr-neutral-100)
+            @include m.boton-primario(v.$clr-primario-300, v.$clr-neutral-100, v.$clr-secundario-300);
+
+            &--activo {
+                background-color: v.$clr-secundario-300;
+            }
         }
         input[type="text"] {
             padding: 0;
