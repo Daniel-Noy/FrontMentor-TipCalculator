@@ -276,10 +276,17 @@
   /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
+
+  [type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance:textfield;
+    appearance: textfield;
+  }
   
   [type="number"]::-webkit-inner-spin-button,
   [type="number"]::-webkit-outer-spin-button {
     height: auto;
+    -webkit-appearance: none; 
   }
   
   /**

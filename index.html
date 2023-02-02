@@ -23,24 +23,24 @@
       <form class="formulario">
         <div class="input-contenedor input-propina">
           <label for="cuenta">Cuenta</label>
-          <input type="text" placeholder="0" >
+          <input class="input__number input__propina" type="number" placeholder="0" >
         </div>
 
         <div class="input-contenedor">
           <label>Propina %</label>
           <div class="botones-propina">
-            <input type="button" class="boton-propina boton-propina--activo" value="5%">
-            <input type="button" class="boton-propina" value="10%">
-            <input type="button" class="boton-propina" value="15%">
-            <input type="button" class="boton-propina" value="25%">
-            <input type="button" class="boton-propina" value="50%">
-            <input type="text" class="propina" placeholder="Custom">
+            <input type="button" class="input boton-propina" id="5" value="5%">
+            <input type="button" class="input boton-propina" id="10" value="10%">
+            <input type="button" class="input boton-propina" id="15" value="15%">
+            <input type="button" class="input boton-propina" id="25" value="25%">
+            <input type="button" class="input boton-propina" id="50" value="50%">
+            <input type="number" class="custom input__number" placeholder="Custom">
           </div>
         </div>
 
         <div class="input-contenedor input-personas">
           <label>Número de personas</label>
-          <input type="text" placeholder="0">
+          <input class="input__number input__personas" type="number" placeholder="0">
         </div>
 
       </form>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="resultado__cantidad">
-              $0.00
+              <p class="resultado__propina">$0.00</p>
             </div>
           </div> <!--propina-->
 
@@ -64,15 +64,16 @@
               <p>/ persona</p>
             </div>
             <div class="resultado__cantidad">
-              <p>$0.00</p>
+              <p class="resultado__total">$0.00</p>
             </div>
           </div>
         </div>
 
-        <input disabled="true" type="button" class="reset" value="Reset">
+        <input type="button" class="reset" value="Reset">
       </div>
     </section> <!--Calculadora-->
   </main>
   
+  <script src="./js/app.js"></script>
 </body>
 </html>
